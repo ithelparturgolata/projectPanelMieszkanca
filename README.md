@@ -10,22 +10,22 @@
 > w której mieszka. 
 
 ## Menu
-* [Informacje ogólne](#general-info)
+* [Informacje ogólne](#informacje-oglne)
 * [Zrzut ekranu](#zrzut-ekranu)
-* [Technologie](#technologies)
-* [Instalacja](#setup)
-* [Kod](#setup)
-* [Plan rozwoju](#features)
+* [Technologie](#technologie)
+* [Instalacja](#instalacja)
+* [Kod](#przykadowy-kod)
+* [Plan rozwoju](#plan-rozwoju)
 * [Status](#status)
-* [Inspiracje](#inspiration)
-* [Kontakt](#contact)
+* [Inspiracje](#inspiracje)
+* [Kontakt](#kontakt)
 
 ## Informacje ogólne
 Kompendium wiedzy dla mieszkańca. Dużo przydatnych informacji, które mają ułatwić funkcjonowanie mieszkańców. 
 Zbiór rzeczy ważnych i potrzebnych dla mieszkańców.
 
 ## Zrzut ekranu
-![Zrzut ekranu](../imgages/screenshot.png)
+![Zrzut ekranu](./images/screenshot.png)
 
 ## Technologie
 * PHP
