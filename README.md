@@ -63,11 +63,9 @@ https://panelmieszkanca.smbudowlani.pl/index.php
 
 
 ## Plan rozwoju
-Logowanie
+
 * sprawdzanie salda
 * panel komunikacji
-
-Do zrobienia:
 * Panel logowania
 
 ## Status
