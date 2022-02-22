@@ -25,7 +25,7 @@ Kompendium wiedzy dla mieszkańca. Dużo przydatnych informacji, które mają u�
 Zbiór rzeczy ważnych i potrzebnych dla mieszkańców.
 
 ## Zrzut ekranu
-![Example screenshot](./imgages/screenshot.png)
+![Zrzut ekranu](imgages/screenshot.png)
 
 ## Technologie
 * PHP
