@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 # Panel Mieszkańca SM Budowlani
-> Panel mieszkańca napisany dla mieszkańców. Projekt autorski. Mieszkaniec otrzymuje od SM kompendium wiedzy na temat nieruchomosci, 
+> Panel mieszkańca napisany dla mieszkańców. Mieszkaniec otrzymuje od SM kompendium wiedzy na temat nieruchomosci, 
 > w której mieszka. 
 
 ## Menu
@@ -39,7 +39,7 @@ Zbiór rzeczy ważnych i potrzebnych dla mieszkańców.
 https://panelmieszkanca.smbudowlani.pl/index.php
 
 ## Przykładowy kod
-Show examples of usage:
+
 
 ```  <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -67,14 +67,14 @@ Logowanie
 * sprawdzanie salda
 * panel komunikacji
 
-To-do list:
+Do zrobienia:
 * Panel logowania
 
 ## Status
-Project is: _in progress_, 
+Status projektu: _in progress_, 
 
 ## Inspiracje
 Projekt autorski.
 
 ## Kontakt
-Created by [@ithelparturgolata](ithelparturgolata@gmail.com) - feel free to contact me!
+Wykonany przez [@ithelparturgolata](ithelparturgolata@gmail.com) 
