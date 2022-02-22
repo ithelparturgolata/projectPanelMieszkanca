@@ -21,8 +21,10 @@
 * [Kontakt](#kontakt)
 
 ## Informacje ogólne
-Kompendium wiedzy dla mieszkańca. Dużo przydatnych informacji, które mają ułatwić funkcjonowanie mieszkańców. 
-Zbiór rzeczy ważnych i potrzebnych dla mieszkańców.
+Dzięki nowemu, rozbudowanemu Panelowi mieszkańca będziecie mogli dowiedzieć się Państwo jaki rodzaj prac remontowych będzie wykonywany w danej lokalizacji, kto jest ich wykonawcą oraz kiedy prace remontowe zostaną rozpoczęte i zakończone. 
+Widoczny będzie również stan funduszu remontowego oraz zadłużenie nieruchomości. 
+W Panelu mieszkańca będzie można również pobrać niezbędne oświadczenia i wnioski. 
+Wszystkie dane przedstawione są w przejrzystej i prostej formule. 
 
 ## Zrzut ekranu
 ![Zrzut ekranu](./images/screenshot.png)
