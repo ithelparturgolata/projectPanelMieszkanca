@@ -10,7 +10,7 @@
 > w której mieszka. 
 
 ## Menu
-* [Informacje ogólne](#informacje oglne)
+* [Informacje ogólne](#informacje-oglne)
 * [Zrzut ekranu](#zrzut-ekranu)
 * [Technologie](#technologie)
 * [Instalacja](#instalacja)
