@@ -11,7 +11,7 @@
 
 ## Menu
 * [Informacje ogólne](#general-info)
-* [Zrzut ekranu](#screenshots)
+* [Zrzut ekranu](#Zrzut ekranu)
 * [Technologie](#technologies)
 * [Instalacja](#setup)
 * [Kod](#setup)
@@ -25,7 +25,7 @@ Kompendium wiedzy dla mieszkańca. Dużo przydatnych informacji, które mają u�
 Zbiór rzeczy ważnych i potrzebnych dla mieszkańców.
 
 ## Zrzut ekranu
-![Zrzut ekranu](imgages/screenshot.png)
+![Zrzut ekranu](../imgages/screenshot.png)
 
 ## Technologie
 * PHP
