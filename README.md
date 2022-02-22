@@ -11,7 +11,7 @@
 
 ## Menu
 * [Informacje ogólne](#general-info)
-* [Zrzut ekranu](#Zrzut ekranu)
+* [Zrzut ekranu](#zrzut-ekranu)
 * [Technologie](#technologies)
 * [Instalacja](#setup)
 * [Kod](#setup)
