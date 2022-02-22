@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Bootstrap core CSS -->
@@ -93,276 +92,377 @@
       <?php } unset($_SESSION['response']); ?>
       <p class="lead text-muted">Budynek: <?= $vulicaBudynek; ?></p>
 
-      <img src="<?= $vzdjecieBudynek; ?>" class="img-fluid" alt="">
-
     </div>
   </div>
 </section>
 
+<?php if ($vinfoOgolne):?>
+  <!-- Button trigger modal -->
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="alert alert-dark" role="alert"><i class="fas fa-bullhorn"></i></i><b>&nbsp;&nbsp;Komunikat</b></div>
+        <div class="card-body"><?= $vinfoOgolne; ?></div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+
+            <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+            </div>
+            <small class="text-muted">###</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif;?>
 
 <main>
 
   <div class="album py-5 bg-light">
     <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
+      <div class="row row-cols-1 row-cols -xl-2">
         <div class="col">
           <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Budynek</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Indeks budynku: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vindeksBudynek; ?></p>
-              <h5 class="btn btn-secondary">Ulica: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vulicaBudynek; ?></p>
-              <h5 class="btn btn-secondary">Administrator: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vnazwiskoAdministrator; ?></p>
-              <h5 class="btn btn-secondary">Telefon: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vtelefonAdministrator; ?></p>
-              <h5 class="btn btn-secondary">E-mail: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vemailAdministrator; ?></p>
+            <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Budynek</div>
+            <div class="container">
+              <div class="row row-cols-2">
+                <h5 class="btn btn-warning"><div class="col">Indeks budynku: </div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vindeksBudynek; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Ulica:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vulicaBudynek; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Administrator:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vnazwiskoAdministrator; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Telefon:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vtelefonAdministrator; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Email:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vemailAdministrator; ?></div></h5>
+              </div>
+            </div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                  <hr>
                 </div>
                 <small class="text-muted">###</small>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;Administracja</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Zarządca: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vnazwaOsiedla; ?></p>
-              <h5 class="btn btn-secondary">Adres: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vadresOsiedla; ?></p>
-              <h5 class="btn btn-secondary">Telefon: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vtelefonOsiedla; ?></p>
-              <h5 class="btn btn-secondary">Kierownik: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vkierownikOsiedla; ?></p>
-              <h5 class="btn btn-secondary">Zastępca: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vzastepcaOsiedla; ?></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="fas fa-home"></i></i>&nbsp;&nbsp;Dokumentacja budynku</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Rok budowy: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vrokBudowy; ?></p>
-              <h5 class="btn btn-secondary">Obręb: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vobrebBudynek; ?></p>
-              <h5 class="btn btn-secondary">Działka: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vdzialkaBudynek; ?></p>
-              <h5 class="btn btn-secondary">Łączna powierzchnia: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vdzialkaPowierzchnia; ?> m<sup>2</sup></p>
-              <h5 class="btn btn-secondary">Powierzchnia wspólna: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vpowierzchniaWspolna; ?> m<sup>2</sup></p>
-              <h5 class="btn btn-secondary">Rzut: </h5>&nbsp;&nbsp;<p class="card-text"><a href="<?= $vrzutBudynek; ?>" target="_blank">Pobierz</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="fas fa-search"></i>&nbsp;&nbsp;Przeglądy - AKTUALNE</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Przegląd kominiarski (obowiązuje do): </h5>&nbsp;&nbsp;<p class="card-text"><?= $vakominyPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd gazowy (obowiązuje do): </h5>&nbsp;&nbsp;<p class="card-text"><?= $vagazPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd roczny budynku (obowiązuje do): </h5>&nbsp;&nbsp;<p class="card-text"><?= $vatechnicznyPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd pięcioletni budowlany (obowiązuje do): </h5>&nbsp;&nbsp;<p class="card-text"><?= $vaelektrykaPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd pięcioletni elektryczny (obowiązuje do): </h5>&nbsp;&nbsp;<p class="card-text"><?= $vaogolnyPrzeglady; ?></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-danger" role="alert"><i class="fas fa-search"></i>&nbsp;&nbsp;Przeglądy - PLANOWANE</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Przegląd kominiarski: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vpkominyPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd gazowy: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vpgazPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd roczny budynku: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vptechnicznyPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd pięcioletni budowlany: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vpelektrykaPrzeglady; ?></p>
-              <h5 class="btn btn-secondary">Przegląd pięcioletni elektryczny: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vpogolnyPrzeglady; ?></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="fas fa-hammer"></i>&nbsp;&nbsp;Remonty</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Rodzaj prac: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vpracaRemonty; ?></p>
-              <h5 class="btn btn-secondary">Wykonawca: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vwykonawcaRemonty; ?></p>
-              <h5 class="btn btn-secondary">Planowane rozpoczęcie prac: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vstartRemonty; ?></p>
-              <h5 class="btn btn-secondary">Planowane zakończenie prac: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vkoniecRemonty; ?></p>
-              <h5 class="btn btn-secondary">Uwagi: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vuwagiRemonty; ?></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="far fa-bell"></i>&nbsp;&nbsp;Energetyka</div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Termin legalizacji wodomierzy: : </h5>&nbsp;&nbsp;<p class="card-text"><?= $vterminLegalizacja; ?></p>
-              <h5 class="btn btn-secondary">Uwagi: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vuwagiLegalizacja; ?></p>
-              <h5 class="btn btn-secondary">Termin odczytu podzielników ciepła:: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vterminPodzielniki; ?></p>
-              <h5 class="btn btn-secondary">Uwagi: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vuwagiPodzielniki; ?></p>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Odczyty podzielników
-              </button>
-              <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Odczyty podzielników</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p class="card-text">W większości budynków mieszkalnych stany wodomierzy i podzielniki są odczytywane radiowo. Tylko w jednym budynku tj. przy ul. Zamoyskiego 5 odczyty wymagają wejścia do mieszkania na przełomie stycznia i lutego (I termin 12.02.2019; II termin 19.02.2019). W pozostałych budynkach mieszkalnych odczyty są pobierane radiowo lub dostęp do liczników jest bezpośrednio z klatki schodowej.</p>
-
-                      <p class="card-text">W przypadku podzielników Brunata Futura+ , których odczyty są pobierane online, mieszkańcy mogą po zarejestrowaniu w serwisie WebMon na bieżąco śledzić zużycie mediów za pomocą łącza internetowego. Do uzyskania dostępu/rejestracji potrzebny jest KOD AKTYWACYJNY. Kod aktywacyjny można uzyskać w Dziale Gospodarki Energetycznej Spółdzielni tel. 52 323 44 65. W przypadku zagubienia lub trudności z aktywacją prosimy się zwracać również pod ten numer.</p>
-
-                      <p class="card-text">W budynkach wyróżnionych w harmonogramie niebieską czcionką wskazania mierników są pobierane drogą radiową lub są odczytywane z przyrządów umieszczonych na klatce schodowej, ale brak jest technicznych możliwości prezentacji odczytów przez internet.</p>
-
-                      <p class="card-text">W harmonogramie oraz w danych umieszczonych w Panelu Mieszkańca jest podany dla danego budynku okres rozliczeniowy i termin odczytu podzielników i wodomierzy. Rozliczenia są dostarczane mieszkańcom w terminie do dwóch miesięcy od końca okresu rozliczeniowego.  Zwykle jest to trzecia dekada drugiego miesiąca.</p>
-                      <!--Wykaz budynków z odczytem zdalnym oraz informacja o możliwości otrzymania KODU w poniższym pliku:-->
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <br><br>
-
-              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                Wymiana baterii || Legalizacja
-              </button>
-              <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel1">Wymiana baterii w podzielnikach || Legalizacja wodomierzy</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Szanowni Państwo!
-
-                      <p class="card-text">Prace w zakresie kompleksowej legalizacji wodomierzy oraz wymiany baterii w podzielnikach kosztów ogrzewania  są realizowane odpowiednio do komunikatów /ograniczeń związanych z pandemią. Natomiast awaryjne wymiany lub wymiany  umawiane indywidualnie są realizowane odpowiednio do potrzeb.</p>
-
-                      <p class="card-text">Zgodnie z przepisami Urzędu Miar wymagana jest okresowa legalizacja wodomierzy. W związku z powyższym Spółdzielnia prowadzi wymianę wodomierzy na posiadające ważną cechę legalizacyjną. Jest to najmniej uciążliwa dla mieszkańców forma spełnienia wymagań legalizacyjnych. Ponadto montowane wodomierze są oczyszczone z osadów.</p>
-
-                      <p class="card-text">W podzielnikach kosztów ogrzewania po 10 latach  wymagana jest wymiana baterii w celu zagwarantowania ciągłości pracy tych urządzeń.
-                      O dokładnym terminie realizacji wyżej wymienionych prac zostaną Państwo powiadomieni, jak dotychczas, odrębnym komunikatem umieszczonym na tablicy informacyjnej lub drzwiach do budynku oraz  na stronie Spółdzielni.
-                      Prosimy o życzliwe przyjęcie pracowników PERFEKT‘u i pomoc w sprawnym przebiegu poprzez odsunięcie mebli, lodówek itp. utrudniających dostęp, odpowiednio do realizowanych prac tj. do wodomierzy lub grzejników.
-                      Prosimy również o wcześniejsze sprawdzenie zaworów przed wodomierzami. Niesprawne zawory przed wodomierzami należy zgłaszać do Administracji Osiedla opiekującej się Państwa budynkiem. Koszt wymiany jest pokrywany z funduszu remontowego i nie wiąże się z żadną dodatkową odpłatnością z Państwa strony ! Prace są realizowane w dwóch terminach wyznaczonych dla danej grupy mieszkań. Mieszkańcy, u których wymiana nastąpi poza wyznaczonymi terminami będą obowiązani pokryć dodatkowy koszt indywidualnego dojazdu w wysokości 35,00 zł + VAT.</p>
-
-                      <p class="card-text">W trosce o bezpieczeństwo i zdrowie nas wszystkich prosimy, aby osoby przebywające na kwarantannie lub przechodzące infekcję z wyprzedzeniem przekazały pracownikom Spółdzielni niezbędne informacje
-                      Osoby czasowo przebywające poza lokalem prosimy o przekazanie danych kontaktowych lub danych osoby mogącej udostępnić lokal do wykonania prac do Działu Gospodarki Energetycznej tel. 52 366 44 15 lub bezpośrednio do firmy PERFEKT tel. 52 360 81 21 lub 52 360 81 00.
-                      Potwierdzenie wymiany jest wykonywane poprzez przenośny terminal danych. Osoby zainteresowane protokółem wymiany w formie pliku PDF lub dokumentu tradycyjnego prosimy o zgłaszanie wniosku do Spółdzielni.
-                      W przypadku wątpliwości lub potrzeby uzyskania szerszych wyjaśnień prosimy się kontaktować z Kierownikiem Działu Gospodarki Energetycznej Spółdzielni tel. 52 366 44 65.</p>
-
-                      <p class="card-text">Nie wykonanie legalizacji wodomierza w terminie podanym w wezwaniu spowoduje przejście na ryczałtowe (20 m3/m-c/osobę) obciążanie lokalu za korzystanie z wody. Czyli tak jak w lokalu bez wodomierzy.
-                      Natomiast w przypadku utraty sprawności podzielnika wskutek braku zasilania (nie wymienienia baterii)  udział tego lokalu w kosztach ogrzewania budynku będzie obliczony tak jak dla mieszkania nie opomiarowanego.  </p>
-
-                      <!--Wykaz budynków z odczytem zdalnym oraz informacja o możliwości otrzymania KODU w poniższym pliku:-->
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="fas fa-piggy-bank"></i></i>&nbsp;&nbsp;Finanse budynku na dzień 30.06.2021 </div>
-            <div class="card-body">
-              <h5 class="btn btn-secondary">Zadłużenie budynku: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vzadluzenieBudynek; ?> zł</p>
-              <h5 class="btn btn-secondary">Fundusz remontowy: </h5>&nbsp;&nbsp;<p class="card-text"><?= $vfunduszBudynek; ?> zł</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="alert alert-primary" role="alert"><i class="fas fa-download"></i></i>&nbsp;&nbsp;Do pobrania</div>
-            <div class="card-body">
-                 <div class="list-group">
-                 <a href="assets/202007131007.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o wydanie zaświadczenia w celu założenia Księgi Wieczystej.</a></li>
-                 <a href="assets/202007161225.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o ustanowienie odrębnej własności lokalu.</a></li>
-                 <a href="assets/202007131008.docx" target="_blank" class="list-group-item list-group-item-action">Adres do korespondencji.</a></li>
-                 <a href="assets/202007161215.docx" target="_blank" class="list-group-item list-group-item-action">Oświadczenie zmiana ilości wody lub osób do ustalenia zaliczek.</a></li>
-                 <a href="assets/202007131009.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o dodatkowe przekazywanie kart opłat.</a></li>
-                 <a href="assets/201910161254.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o wydanie warunków wymiany grzejnika.</a></li>
-                 <a href="assets/201803191314.doc" target="_blank" class="list-group-item list-group-item-action">Warunki techniczne montażu klimatyzatorów.</a></li>
-                 <a href="assets/20191008819.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o wydanie warunków przebudowy/zadaszenia balkonu.</a></li>
-                 <a href="assets/202007161216.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o dofinansowanie wymiany okien.</a></li>
-                 <a href="assets/201803191316.doc" target="_blank" class="list-group-item list-group-item-action">Warunki techniczne montażu indywidualnych anten odbiorczych.</a></li>
-                 <a href="assets/202007131010.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o zwrot nadpłaty na konto.</a></li>
-               </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
-                </div>
-                <small class="text-muted">###</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
       </div>
     </div>
-  </div>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols -xl-2">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="alert alert-dark" role="alert"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;Administracja</div>
+              <div class="container">
+                <div class="row row-cols-2">
+                  <h5 class="btn btn-warning"><div class="col">Zarządca: </div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vnazwaOsiedla; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Adres:</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vadresOsiedla; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Telefon:</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vtelefonOsiedla; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Kierownik:</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vkierownikOsiedla; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Zastępca:</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vzastepcaOsiedla; ?></div></h5>
+                </div>
+              </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                    <hr>
+                  </div>
+                  <small class="text-muted">###</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols -xl-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="alert alert-dark" role="alert"><i class="fas fa-home"></i>&nbsp;&nbsp;Dokumentacja budynku</div>
+                <div class="container">
+                  <div class="row row-cols-2">
+                    <h5 class="btn btn-warning"><div class="col">Rok budowy: </div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vrokBudowy; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Obręb:</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vobrebBudynek; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Działka:</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vdzialkaBudynek; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Łączna powierzchnia działki:</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vdzialkaPowierzchnia; ?> m<sup>2</sup></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Powierzchnia wspólna budynku:</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpowierzchniaWspolna; ?> m<sup>2</sup></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Rzut:</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><a href="<?= $vrzutBudynek; ?>" target="_blank">Pobierz</a></div></h5>
+                  </div>
+                </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                      <hr>
+                    </div>
+                    <small class="text-muted">###</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row row-cols-1 row-cols -xl-2">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="alert alert-dark" role="alert"><i class="fas fa-piggy-bank"></i>&nbsp;&nbsp;Finanse budynku na dzień 31.12.2021 </div>
+                  <div class="container">
+                    <div class="row row-cols-2">
+                      <h5 class="btn btn-warning"><div class="col">Zadłużenie budynku: </div></h5>
+                      <h5 class="btn btn-outline-secondary"><div class="col"><?= $vzadluzenieBudynek; ?> zł</div></h5>
+                      <h5 class="btn btn-warning"><div class="col">Fundusz remontowy:</div></h5>
+                      <h5 class="btn btn-outline-secondary"><div class="col"><?= $vfunduszBudynek; ?> zł</div></h5>
+                    </div>
+                  </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                        <hr>
+                      </div>
+                      <small class="text-muted">###</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols -xl-2">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Energetyka </div>
+            <div class="container">
+              <div class="row row-cols-2">
+                <h5 class="btn btn-warning"><div class="col">Termin odczytu podzielników ciepła:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vterminPodzielniki; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Termin legalizacji wodomierzy:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vterminLegalizacja; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Uwagi legalizacja:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vuwagiLegalizacja; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Wymiana baterii:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vwymianaBaterii; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Uwagi wymiana baterii:</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vuwagiWymianaBaterii; ?></div></h5>
+              </div>
+            </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                  <hr>
+                </div>
+                <small class="text-muted">###</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <?php if ($vpracaRemonty):?>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols -xl-2">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Remonty - <?= $vpracaRemonty; ?></div>
+            <div class="container">
+              <div class="row row-cols-2">
+                <h5 class="btn btn-warning"><div class="col">Rodzaj prac</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpracaRemonty; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Wykonawca</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vwykonawcaRemonty; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Planowane rozpoczęcie</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vstartRemonty; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Planowane zakończenie</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vkoniecRemonty; ?></div></h5>
+                <h5 class="btn btn-warning"><div class="col">Uwagi</div></h5>
+                <h5 class="btn btn-outline-secondary"><div class="col"><?= $vuwagiRemonty; ?></div></h5>
+              </div>
+            </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                  <hr>
+                </div>
+                <small class="text-muted">###</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php endif;?>
+
+    <?php if ($vpracaRemonty1):?>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols -xl-2">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Remonty - <?= $vpracaRemonty1; ?></div>
+              <div class="container">
+                <div class="row row-cols-2">
+                  <h5 class="btn btn-warning"><div class="col">Rodzaj prac</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpracaRemonty1; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Wykonawca</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vwykonawcaRemonty1; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Planowane rozpoczęcie</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vstartRemonty1; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Planowane zakończenie</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vkoniecRemonty1; ?></div></h5>
+                  <h5 class="btn btn-warning"><div class="col">Uwagi</div></h5>
+                  <h5 class="btn btn-outline-secondary"><div class="col"><?= $vuwagiRemonty1; ?></div></h5>
+                </div>
+              </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                    <hr>
+                  </div>
+                  <small class="text-muted">###</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php endif;?>
+
+      <?php if ($vpracaRemonty2):?>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols -xl-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Remonty - <?= $vpracaRemonty2; ?></div>
+                <div class="container">
+                  <div class="row row-cols-2">
+                    <h5 class="btn btn-warning"><div class="col">Rodzaj prac</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpracaRemonty2; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Wykonawca</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vwykonawcaRemonty2; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Planowane rozpoczęcie</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vstartRemonty2; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Planowane zakończenie</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vkoniecRemonty2; ?></div></h5>
+                    <h5 class="btn btn-warning"><div class="col">Uwagi</div></h5>
+                    <h5 class="btn btn-outline-secondary"><div class="col"><?= $vuwagiRemonty2; ?></div></h5>
+                  </div>
+                </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                      <hr>
+                    </div>
+                    <small class="text-muted">###</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php endif;?>
+
+        <?php if ($vinfoDodatkowe):?>
+          <!-- Button trigger modal -->
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="alert alert-dark" role="alert"><i class="fas fa-bullhorn"></i></i><b>&nbsp;&nbsp;Przeglądy - komunikat</b></div>
+                <div class="card-body"><?= $vinfoDodatkowe; ?></div>
+
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+
+                    <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                    </div>
+                    <small class="text-muted">###</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <?php endif;?>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols -xl-2">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Przeglądy </div>
+            <div class="container">
+              <div class="row row-cols-2">
+                <h5 class="btn btn-warning"><div class="col">Aktualny</div></h5>
+                <h5 class="btn btn-warning"><div class="col">Wykonany w :</div></h5>
+              </div>
+            <div class="row row-cols-2">
+            </div>
+            <!-- <?php if ($vinfoDodatkowe):?>
+              <div class="alert alert-dark" role="alert"><b><?= $vinfoDodatkowe; ?></b></div>
+            <?php endif;?> -->
+            <div class="row row-cols-2">
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd kominiarski (wykonany w)</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vakominyPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd gazowy (wykonany w):</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vagazPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd roczny budynku (wykonany w):</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vatechnicznyPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd pięcioletni budowlany (wykonany w):</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vaogolnyPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd pięcioletni elektryczny (wykonany w):</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vaelektrykaPrzeglady; ?></div></h5>
+            </div>
+            <div class="row row-cols-2">
+              <h5 class="btn btn-warning"><div class="col">Najbliższy</div></h5>
+              <h5 class="btn btn-warning"><div class="col">Planowany w:</div></h5>
+            </div>
+            <div class="row row-cols-2">
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd kominiarski:</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpkominyPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd gazowy:</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpgazPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd roczny budynku:</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vptechnicznyPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd pięcioletni budowlany:</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpogolnyPrzeglady; ?></div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col">Przegląd pięcioletni elektryczny:</div></h5>
+              <h5 class="btn btn-outline-secondary"><div class="col"><?= $vpelektrykaPrzeglady; ?></div></h5>
+            </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                </div>
+                <small class="text-muted">###</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -412,10 +512,44 @@
             </div>
           </div>
         </div>
+
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row row-cols-1 row-cols -xl-2">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="alert alert-dark" role="alert"><i class="far fa-building"></i>&nbsp;&nbsp;Do pobrania </div>
+                  <div class="container">
+                    <div class="row row-cols-2">
+                      <a href="assets/202007131007.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o wydanie zaświadczenia w celu założenia Księgi Wieczystej.</a></li>
+                      <a href="assets/202007161225.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o ustanowienie odrębnej własności lokalu.</a></li>
+                      <a href="assets/202007131008.docx" target="_blank" class="list-group-item list-group-item-action">Adres do korespondencji.</a></li>
+                      <a href="assets/202007161215.docx" target="_blank" class="list-group-item list-group-item-action">Oświadczenie zmiana ilości wody lub osób do ustalenia zaliczek.</a></li>
+                      <a href="assets/202007131009.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o dodatkowe przekazywanie kart opłat.</a></li>
+                      <a href="assets/201910161254.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o wydanie warunków wymiany grzejnika.</a></li>
+                      <a href="assets/201803191314.doc" target="_blank" class="list-group-item list-group-item-action">Warunki techniczne montażu klimatyzatorów.</a></li>
+                      <a href="assets/20191008819.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o wydanie warunków przebudowy/zadaszenia balkonu.</a></li>
+                      <a href="assets/202007161216.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o dofinansowanie wymiany okien.</a></li>
+                      <a href="assets/201803191316.doc" target="_blank" class="list-group-item list-group-item-action">Warunki techniczne montażu indywidualnych anten odbiorczych.</a></li>
+                      <a href="assets/202007131010.docx" target="_blank" class="list-group-item list-group-item-action">Wniosek o zwrot nadpłaty na konto.</a></li>
+                    </div>
+                  </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!--<a href="details_2316.html" class="btn btn-outline-warning">Szczegóły</a>-->
+                        <hr>
+                      </div>
+                      <small class="text-muted">###</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
   </div>
-
 
 </main>
 

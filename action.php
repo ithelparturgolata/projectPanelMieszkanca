@@ -20,6 +20,7 @@
 	$pelektrykaPrzeglady;
 	$pogolnyPrzeglady;
 	$pracaRemonty;
+	$infoDodatkowe;
 	$ankietaRemonty;
 	$wynikRemonty;
 	$przetargRemonty;
@@ -39,10 +40,11 @@
 	$smieciPazdziernik;
 	$smieciListopad;
 	$smieciGrudzien;
+	$terminPodzielniki;
 	$terminLegalizacja;
 	$uwagiLegalizacja;
-	$terminPodzielniki;
-	$uwagiPodzielniki;
+	$wymianaBaterii;
+	$uwagiWymianaBaterii;
 	$zadluzenieBudynek;
 	$funduszBudynek;
 	$rokBudowy;
@@ -50,9 +52,20 @@
 	$dzialkaBudynek;
 	$dzialkaPowierzchnia;
 	$powierzchniaWspolna;
+	$powierzchniaUdzial;
 	$rzutBudynek;
 	$zdjecieBudynek;
-
+	$pracaRemonty1;
+	$wykonawcaRemonty1;
+	$startRemonty1;
+	$koniecRemonty1;
+	$uwagiRemonty1;
+	$pracaRemonty2;
+	$wykonawcaRemonty2;
+	$startRemonty2;
+	$koniecRemonty2;
+	$uwagiRemonty2;
+	$infoOgolne;
 
 if(isset($_POST['add'])){
 	$indeksBudynek=$_POST['indeksBudynek'];
@@ -109,7 +122,6 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$nazwiskoAdministrator=$row['nazwiskoAdministrator'];
 		$telefonAdministrator=$row['telefonAdministrator'];
 		$emailAdministrator=$row['emailAdministrator'];
-
 		$pkominyPrzeglady=$row['pkominyPrzeglady'];
 		$pgazPrzeglady=$row['pgazPrzeglady'];
 		$ptechnicznyPrzeglady=$row['ptechnicznyPrzeglady'];
@@ -117,6 +129,7 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$pogolnyPrzeglady=$row['pogolnyPrzeglady'];
 		$smieciPrzeglady=$row['smieciPrzeglady'];
 		$pracaRemonty=$row['pracaRemonty'];
+		$infoDodatkowe=$row['infoDodatkowe'];
 		$ankietaRemonty=$row['ankietaRemonty'];
 		$wynikRemonty=$row['wynikRemonty'];
 		$przetargRemonty=$row['przetargRemonty'];
@@ -136,10 +149,11 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$smieciPazdziernik=$row['smieciPazdziernik'];
 		$smieciListopad=$row['smieciListopad'];
 		$smieciGrudzien=$row['smieciGrudzien'];
+		$terminPodzielniki=$row['smieciGrudzien'];
 		$terminLegalizacja=$row['smieciGrudzien'];
 		$uwagiLegalizacja=$row['smieciGrudzien'];
-		$terminPodzielniki=$row['smieciGrudzien'];
-		$uwagiPodzielniki=$row['uwagiPodzielniki'];
+		$wymianaBaterii=$row['wymianaBaterii'];
+		$uwagiWymianaBaterii=$row['uwagiWymianaBaterii'];
 		$zadluzenieBudynek=$row['zadluzenieBudynek'];
 		$funduszBudynek=$row['funduszBudynek'];
 		$rokBudowy=$row['rokBudowy'];
@@ -147,8 +161,21 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$dzialkaBudynek=$row['dzialkaBudynek'];
 		$dzialkaPowierzchnia=$row['dzialkaPowierzchnia'];
 		$powierzchniaWspolna=$row['powierzchniaWspolna'];
+		$powierzchniaUdzial=$row['powierzchniaUdzial'];
 		$rzutBudynek=$row['rzutBudynek'];
 		$zdjecieBudynek=$row['zdjecieBudynek'];
+		$pracaRemonty1=$row['pracaRemonty1'];
+		$wykonawcaRemonty1=$row['wykonawcaRemonty1'];
+		$startRemonty1=$row['startRemonty1'];
+		$koniecRemonty1=$row['koniecRemonty1'];
+		$uwagiRemonty1=$row['uwagiRemonty1'];
+		$pracaRemonty2=$row['pracaRemonty2'];
+		$wykonawcaRemonty2=$row['wykonawcaRemonty2'];
+		$startRemonty2=$row['startRemonty2'];
+		$koniecRemonty2=$row['koniecRemonty2'];
+		$uwagiRemonty2=$row['uwagiRemonty2'];
+		$infoOgolne=$row['infoOgolne'];
+
 
 		$update=true;
 	}
@@ -204,6 +231,7 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$vaelektrykaPrzeglady=$row['aelektrykaPrzeglady'];
 		$vaogolnyPrzeglady=$row['aogolnyPrzeglady'];
 		$vpracaRemonty=$row['pracaRemonty'];
+		$vinfoDodatkowe=$row['infoDodatkowe'];
 		$vwykonawcaRemonty=$row['wykonawcaRemonty'];
 		$vstartRemonty=$row['startRemonty'];
 		$vkoniecRemonty=$row['koniecRemonty'];
@@ -220,10 +248,11 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$vsmieciPazdziernik=$row['smieciPazdziernik'];
 		$vsmieciListopad=$row['smieciListopad'];
 		$vsmieciGrudzien=$row['smieciGrudzien'];
+		$vterminPodzielniki=$row['terminPodzielniki'];
 		$vterminLegalizacja=$row['terminLegalizacja'];
 		$vuwagiLegalizacja=$row['uwagiLegalizacja'];
-		$vterminPodzielniki=$row['terminPodzielniki'];
-		$vuwagiPodzielniki=$row['uwagiPodzielniki'];
+		$vwymianaBaterii=$row['wymianaBaterii'];
+		$vuwagiWymianaBaterii=$row['uwagiWymianaBaterii'];
 		$vzadluzenieBudynek=$row['zadluzenieBudynek'];
 		$vfunduszBudynek=$row['funduszBudynek'];
 		$vrokBudowy=$row['rokBudowy'];
@@ -231,9 +260,20 @@ $query="INSERT INTO budynek(indeksBudynek, ulicaBudynek, nazwaOsiedla, adresOsie
 		$vdzialkaBudynek=$row['dzialkaBudynek'];
 		$vdzialkaPowierzchnia=$row['dzialkaPowierzchnia'];
 		$vpowierzchniaWspolna=$row['powierzchniaWspolna'];
+		$vpowierzchniaUdzial=$row['powierzchniaUdzial'];
 		$vrzutBudynek=$row['rzutBudynek'];
 		$vzdjecieBudynek=$row['zdjecieBudynek'];
-
+		$vpracaRemonty1=$row['pracaRemonty1'];
+		$vwykonawcaRemonty1=$row['wykonawcaRemonty1'];
+		$vstartRemonty1=$row['startRemonty1'];
+		$vkoniecRemonty1=$row['koniecRemonty1'];
+		$vuwagiRemonty1=$row['uwagiRemonty1'];
+		$vpracaRemonty2=$row['pracaRemonty2'];
+		$vwykonawcaRemonty2=$row['wykonawcaRemonty2'];
+		$vstartRemonty2=$row['startRemonty2'];
+		$vkoniecRemonty2=$row['koniecRemonty2'];
+		$vuwagiRemonty2=$row['uwagiRemonty2'];
+		$vinfoOgolne=$row['infoOgolne'];
 
 	}
 ?>

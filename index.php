@@ -68,7 +68,7 @@
         <?php } unset($_SESSION['response']); ?>
         <p class="lead text-muted">Szanowny mieszkańcu Spółdzielni Mieszkaniowej "BUDOWLANI".</p>
         <p class="lead text-muted">Poniżej udostępniamy Panel Mieszkańca, czyli miejsce gdzie otrzymujesz dostęp do wielu informacji dotyczących budynku w którym mieszkasz.<p>
-        <p class="lead text-muted">Szukanie budynku po Indeksie ( 4 cyfyr) lub adresie.</p>  
+        <p class="lead text-muted">Szukanie budynku po Indeksie ( 4 cyfyr) lub adresie.</p>
         </p>
       </div>
     </div>
@@ -100,7 +100,6 @@
                 <tr>
                   <td><?= $row['indeksBudynek']; ?></td>
                   <td><?= $row['ulicaBudynek']; ?></td>
-
                   <td><a href="details.php?details=<?= $row['idBudynek']; ?>" class="badge badge-primary p-2">Szczegóły</a></td>
                 </tr>
                 <?php } ?>
