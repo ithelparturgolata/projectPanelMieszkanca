@@ -66,7 +66,7 @@ https://panelmieszkanca.smbudowlani.pl/index.php
 
 * sprawdzanie salda
 * panel komunikacji
-* Panel logowania
+* panel logowania
 
 ## Status
 Status projektu: _in progress_, 
